@@ -1,23 +1,31 @@
-/* Ledger help site. One stylesheet, no fonts to fetch, no scripts. It has to
-   open fast on a job trailer's signal, on a phone somebody bought in 2019. */
+/* Ledger help site.
+   One stylesheet, no scripts, no fonts to fetch, one 59 KB icon. It has to open
+   on a job trailer's signal, on a phone somebody bought in 2019. Everything
+   here is system fonts and flat color. */
 
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
-  --navy:   #0a1e4d;
-  --navy-2: #133063;
-  --paper:  #f6f5f2;
-  --card:   #ffffff;
-  --ink:    #16191d;
-  --ink-2:  #5b636f;
-  --line:   #e2ded7;
-  --orange: #c25708;
+  --navy:    #0a1e4d;
+  --navy-2:  #123163;
+  --navy-3:  #061634;
+  --paper:   #f5f4f1;
+  --card:    #ffffff;
+  --ink:     #14181f;
+  --ink-2:   #545c69;
+  --line:    #e3dfd8;
+  --red:     #b4241f;
+  --orange:  #b4530a;
+  --star:    #ffffff;
+  --shadow:  0 1px 2px rgba(10,30,77,.05), 0 8px 24px rgba(10,30,77,.07);
+  --r:       16px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #0b1220; --card: #121a2b; --ink: #eef1f5; --ink-2: #9aa5b6;
-    --line: #222d42; --orange: #ff9130;
+    --paper: #0b1220; --card: #131c2e; --ink: #eef1f5; --ink-2: #9aa5b6;
+    --line: #222d42; --red: #ff6b63; --orange: #ff9130;
+    --shadow: none;
   }
 }
 
@@ -27,75 +35,141 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ---- hero ---- */
 
 header {
   background: var(--navy);
+  background-image:
+    radial-gradient(120% 90% at 50% -20%, var(--navy-2), transparent 60%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23ffffff" fill-opacity="0.055"><path d="M26 14l2.4 7.3h7.7l-6.2 4.5 2.4 7.3-6.3-4.6-6.2 4.6 2.3-7.3-6.2-4.5h7.7z"/><path d="M88 68l2.4 7.3h7.7l-6.2 4.5 2.4 7.3-6.3-4.6-6.2 4.6 2.3-7.3-6.2-4.5h7.7z"/></g></svg>');
   color: #fff;
-  padding: 2.4rem 1.25rem 2rem;
+  padding: 2.6rem 0 2.2rem;
+  border-bottom: 4px solid var(--red);
 }
-header .wrap { max-width: 42rem; margin: 0 auto; }
 
-.mark {
-  display: inline-flex; align-items: center; gap: .55rem;
-  font-weight: 700; letter-spacing: .16em; font-size: .78rem;
-  text-transform: uppercase; color: #ffb46b;
+.hero { display: flex; align-items: center; gap: 1.1rem; }
+.hero img {
+  width: 76px; height: 76px; border-radius: 18px; flex: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
 }
-.mark::before {
-  content: ''; width: 15px; height: 15px; border-radius: 50%;
-  border: 2.5px solid #ff9130;
-  background:
-    linear-gradient(#ff9130, #ff9130) 50% 4% / 2px 46% no-repeat,
-    linear-gradient(#ff9130, #ff9130) 96% 50% / 30% 2px no-repeat;
+.hero h1 {
+  margin: 0; font-size: 2.05rem; line-height: 1.1; letter-spacing: -.025em;
 }
-header h1 {
-  margin: .7rem 0 .35rem;
-  font-size: 2rem; line-height: 1.15; letter-spacing: -.02em;
-}
-header p { margin: 0; color: #b9cbe8; font-size: 1.02rem; }
+.hero p { margin: .3rem 0 0; color: #b7cbea; font-size: 1.02rem; }
 
-nav { margin-top: 1.4rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+/* Three facts, stated once, at the top. They are the whole pitch. */
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.4rem; }
+.chips span {
+  font-size: .8rem; font-weight: 640; letter-spacing: .02em;
+  padding: .34rem .7rem; border-radius: 999px;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16);
+  color: #dbe7f8;
+}
+
+nav { margin-top: 1.4rem; display: flex; gap: .5rem; }
 nav a {
-  padding: .5rem .85rem; border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.28);
-  color: #fff; text-decoration: none; font-size: .92rem; font-weight: 600;
+  padding: .52rem .95rem; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff; text-decoration: none; font-size: .93rem; font-weight: 640;
 }
-nav a[aria-current="page"] { background: #ff9130; border-color: #ff9130; color: var(--navy); }
+nav a:hover { background: rgba(255,255,255,.1); }
+nav a[aria-current="page"] {
+  background: #fff; border-color: #fff; color: var(--navy);
+}
 
-main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+/* ---- body ---- */
+
+main { padding-top: 2.2rem; padding-bottom: 3rem; }
+
+.lede { font-size: 1.14rem; line-height: 1.55; color: var(--ink-2); margin: 0 0 1.8rem; }
+.lede strong { color: var(--ink); font-weight: 650; }
 
 h2 {
-  margin: 2.3rem 0 .6rem; font-size: 1.28rem; letter-spacing: -.015em;
-  padding-top: 1.4rem; border-top: 1px solid var(--line);
+  margin: 2.6rem 0 1rem; font-size: 1.12rem; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--ink-2); font-weight: 700;
 }
-main > h2:first-of-type { border-top: 0; padding-top: 0; margin-top: .4rem; }
-h3 { margin: 1.5rem 0 .35rem; font-size: 1.03rem; }
+main > .wrap > h2:first-child { margin-top: 0; }
 
-p, li { color: var(--ink); }
-ul { padding-left: 1.15rem; }
-li { margin: .3rem 0; }
+h3 { margin: 0 0 .4rem; font-size: 1.06rem; letter-spacing: -.01em; }
 
-.lede { font-size: 1.1rem; color: var(--ink-2); }
-
-.card {
-  background: var(--card); border: 1px solid var(--line);
-  border-radius: 14px; padding: 1.1rem 1.15rem; margin: 1.2rem 0;
-}
-.card p:first-child { margin-top: 0; }
-.card p:last-child { margin-bottom: 0; }
-
-.big {
-  font-size: 1.3rem; font-weight: 700; letter-spacing: -.02em;
-  color: var(--orange); margin: 0;
-}
-
+p { margin: 0 0 1rem; }
+ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+li { margin: .32rem 0; }
 a { color: var(--orange); }
 
-.meta { color: var(--ink-2); font-size: .9rem; }
+/* ---- the free card ---- */
+
+.free {
+  background: var(--card); border: 1px solid var(--line);
+  border-left: 4px solid var(--red);
+  border-radius: var(--r); padding: 1.15rem 1.25rem;
+  box-shadow: var(--shadow); margin: 0 0 1.6rem;
+}
+.free b { display: block; font-size: 1.24rem; letter-spacing: -.02em; margin-bottom: .3rem; }
+.free p { margin: 0; color: var(--ink-2); font-size: .96rem; }
+
+/* ---- what it does ---- */
+
+.grid { display: grid; gap: .8rem; grid-template-columns: 1fr; }
+@media (min-width: 40rem) { .grid { grid-template-columns: 1fr 1fr; } }
+
+.tile {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 1.05rem 1.1rem; box-shadow: var(--shadow);
+}
+.tile h3 { font-size: 1rem; }
+.tile p { margin: 0; font-size: .94rem; color: var(--ink-2); line-height: 1.5; }
+
+/* ---- contact ---- */
+
+.mailto {
+  display: inline-block; margin-bottom: 1rem;
+  background: var(--navy); color: #fff; text-decoration: none;
+  padding: .8rem 1.2rem; border-radius: 12px;
+  font-weight: 650; font-size: 1rem;
+}
+.mailto:hover { background: var(--navy-2); }
+
+/* ---- faq ---- */
+
+.qa {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 1.05rem 1.15rem; margin-bottom: .7rem;
+  box-shadow: var(--shadow);
+}
+.qa p:last-child { margin-bottom: 0; }
+.qa p { font-size: .96rem; color: var(--ink-2); }
+.qa p strong, .qa p b { color: var(--ink); }
+
+/* ---- privacy page ---- */
+
+.nothing {
+  background: var(--navy); color: #fff; border-radius: var(--r);
+  padding: 1.5rem 1.35rem; margin: 0 0 1.6rem;
+  border-left: 4px solid var(--red);
+}
+.nothing b { display: block; font-size: 2rem; letter-spacing: -.03em; line-height: 1; }
+.nothing p { margin: .6rem 0 0; color: #b7cbea; font-size: .96rem; }
+
+.plain { background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 1.05rem 1.15rem; box-shadow: var(--shadow);
+  margin-bottom: 1rem; }
+.plain p:last-child, .plain ul:last-child { margin-bottom: 0; }
+
+/* ---- footer ---- */
 
 footer {
-  max-width: 42rem; margin: 0 auto; padding: 1.6rem 1.25rem 3rem;
-  border-top: 1px solid var(--line); color: var(--ink-2); font-size: .88rem;
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 3rem; color: var(--ink-2); font-size: .87rem; line-height: 1.55;
 }
 footer a { color: var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
