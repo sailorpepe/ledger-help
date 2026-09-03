@@ -82,6 +82,9 @@ nav a:hover { background: rgba(255,255,255,.1); }
 nav a[aria-current="page"] {
   background: #fff; border-color: #fff; color: var(--navy);
 }
+/* The one pill that is an action rather than a page. */
+nav a.store { background: var(--red); border-color: var(--red); }
+nav a.store:hover { background: #c9332d; }
 
 /* ---- body ---- */
 

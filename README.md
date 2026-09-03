@@ -33,7 +33,7 @@ plain Spanish.
 It is free, it has no account, and nothing a member logs ever leaves their
 phone. There is no server to leave it to.
 
-Built by a member of LIUNA Local 582.
+Built by a union laborer.
 
 ## Why the privacy policy is short
 
