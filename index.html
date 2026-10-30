@@ -22,7 +22,7 @@
     <div class="chips">
       <span>Free, always</span>
       <span>No account</span>
-      <span>Nothing leaves your phone</span>
+      <span>Nothing sent to us</span>
       <span>English &amp; Español</span>
     </div>
     <nav>
@@ -56,14 +56,18 @@
       the real rules in the agreement — not jobsite folklore.</p>
     </div>
     <div class="tile">
-      <h3>Knows what a short day pays</h3>
-      <p>Rained out at ten? Sent home at the gate? Article 39 sets a floor, and
-      the app tells you what it is and cites the paragraph.</p>
+      <h3>Knows what a short day may be owed</h3>
+      <p>Rained out at ten? Sent home at the gate? The app tells you what the
+      agreement may owe you and cites the paragraph. Most of Article 39 is
+      written for Will and Grundy counties. Work anywhere else? Ask your
+      steward before you use that floor.</p>
     </div>
     <div class="tile">
       <h3>Watches your cards</h3>
-      <p>OSHA, HAZWOPER, forklift, CPR. Warnings at 90, 30 and 7 days — enough
-      time to actually book the refresher.</p>
+      <p>OSHA, HAZWOPER, forklift, CPR. Each card counts down on the Cards tab.
+      From version 1.0.1, inside 30 days or once it lapses, a line also shows
+      on the Log tab — the screen you open every day. There are no phone
+      notifications.</p>
     </div>
     <div class="tile">
       <h3>Reads the filings for you</h3>
@@ -84,50 +88,90 @@
 
   <div class="qa">
     <h3>Where are my hours stored?</h3>
-    <p>On your phone, and nowhere else. There is no server. Nothing you log is
-    uploaded, and no one — including me — can read it. See the
-    <a href="./privacy.html">privacy policy</a>.</p>
+    <p>On your phone. There is no server: Ledger uploads nothing you log, and I
+    never see it. If your iPhone backs up to iCloud or a computer, that backup
+    may include Ledger's data, the same as any app's. On the web version your
+    hours are in that browser's storage, and clearing the browser's data erases
+    them. The browser can also clear them on its own: on iPhone, Safari may
+    erase them if you don't open the page for about a week, unless you've added
+    Ledger to your Home Screen. Don't count on the phone to keep them — save a
+    backup. See the <a href="./privacy.html">privacy policy</a>.</p>
   </div>
 
   <div class="qa">
     <h3>What happens if I lose my phone?</h3>
-    <p>Your log goes with it. That is the trade for having nobody else hold your
-    records. <strong>Use Settings → Back up.</strong> It writes two files: one
-    you can read and print, and one that restores everything. Send them to
-    yourself and keep them somewhere you will still have in a year. Do this
-    before you need it, not after.</p>
+    <p>Your log may go with it. That is the trade for having nobody else hold
+    your records. Restoring your iPhone's own iCloud or computer backup might
+    bring it back, but don't count on it. <strong>Use Settings → Save a
+    backup.</strong> It writes two files: one you can read and print, and one
+    that restores your work log. Your cards, paydays and settings are not in
+    the backup yet, so write your card numbers down too. On iPhone it opens the
+    share sheet. Save the files to iCloud Drive (not On My iPhone), AirDrop them
+    to another phone or computer, or mail them to a personal address — a copy
+    that stays on this phone goes with it. Keep them somewhere you will still
+    have in a year. Do this before you need it, not after.</p>
   </div>
 
   <div class="qa">
     <h3>Can I change an entry after I save it?</h3>
-    <p>You can void it, and you can log a correction. You cannot silently
-    rewrite it. Every entry is sealed with a hash that links to the one before
-    it, so the log can show it has not been tampered with. A crossed-out line in
-    a logbook is still evidence; a log that can be quietly edited is not.</p>
+    <p>You can remove it with its × in the Recent list on the Log tab (your
+    latest 30 entries) and log it again. It stays in the record marked as
+    removed. You cannot silently rewrite it. Every entry is sealed with a hash
+    that links to the one written before it, so an entry changed afterwards no
+    longer matches its seal, and the backup report says whether the chain is
+    intact. It is not a notary: the seal time comes from your phone's clock,
+    and someone who knows how the seal works could build a whole new log from
+    scratch. A crossed-out line in a logbook is still evidence; a log that can
+    be quietly edited is not.</p>
   </div>
 
   <div class="qa">
     <h3>The overtime split looks wrong for my day.</h3>
     <p>The app uses the rules in the published agreement, which sometimes differ
     from how a job actually pays. Tap <strong>How this day is paid</strong>
-    under the hours to see the rule and the article it comes from. If your job
-    pays something different, that is worth a conversation with your steward —
-    and email me if you think the app has the rule wrong.</p>
+    under the hours to see the rule and the article it comes from. Picked
+    Four 10s? Straight time to 10 hours is allowed only in a week with a
+    holiday (Art. 15 ¶1), so in any other week hours 9 and 10 split as
+    overtime. Version 1.0 counted them as straight time — update the app. If
+    your job pays something different, that is worth a conversation with your
+    steward — and email me if you think the app has the rule wrong.</p>
+  </div>
+
+  <div class="qa">
+    <h3>The date or time on my log looks off.</h3>
+    <p>From version 1.0.1, Ledger keeps your log on Central (Chicago) time,
+    whatever your phone is set to. Working in another time zone? Pick yours in
+    <strong>Settings → Time zone</strong>. Don't see it? Update the app.
+    Logged in the evening on version 1.0? That day may carry the next day's
+    date. If it is in your Recent list, remove it with its × and log it
+    again.</p>
   </div>
 
   <div class="qa">
     <h3>Why does it ask why my day was short?</h3>
-    <p>Because showing up is paid time. Article 39 sets a floor for a day cut
-    short by weather, by being sent home, or by waiting on the site, and most
-    people have never read it. The app tells you the floor and cites the
-    paragraph. It never changes your hours by itself.</p>
+    <p>Because showing up can be paid time. Article 39 sets a floor for a day
+    cut short by weather, by being sent home, or by waiting on the site, and
+    most people have never read it. Most of it is written for Will and Grundy
+    counties, and the app can't tell which county you work in. So from version
+    1.0.1 it says what <em>may</em> be owed, cites the paragraph, and tells you
+    to check with your steward. It never changes your hours by itself — you tap
+    <strong>Use</strong> if you want the floor. If you don't work in Will or
+    Grundy county, don't tap Use unless your steward says that floor applies to
+    you. Outside Will and Grundy, building work goes by Art. 19, road work by
+    Art. 26, and sewer or tunnel work by Art. 32, and ¶5's 2 hours of show-up
+    time applies everywhere when weather stops the day and nobody called you
+    off. The union has 45 days to file a grievance (Art. 11 ¶2), so
+    tell your steward right away. Don't wait for the check.</p>
   </div>
 
   <div class="qa">
     <h3>The microphone will not work.</h3>
     <p>Open the iPhone <strong>Settings</strong> app, scroll down to
     <strong>Ledger</strong>, and turn on <strong>Microphone</strong> and
-    <strong>Speech Recognition</strong>. Dictation runs on the device itself.</p>
+    <strong>Speech Recognition</strong>. From version 1.0.1, dictation runs
+    only on the phone itself, and the web version has no mic. If your iPhone
+    can't turn speech into text on the phone for your language, Ledger won't
+    record — type the note instead.</p>
   </div>
 
   <div class="qa">
@@ -135,8 +179,11 @@
     <p>They come from filings that unions and benefit plans are required by
     federal law to make public — LM-2 reports to the U.S. Department of Labor
     and Form 5500 reports under ERISA. The app shows what is in those filings
-    and says which one. It does not editorialize the numbers, and anything it
-    deduces rather than reads is labeled as a deduction.</p>
+    and says which one. Where the app comments on a number, the comment is in
+    its own words beside it, not part of the filing. The filings give
+    no ID for a person, so one person's pay is matched across filings by name,
+    and the app says so. A figure worked out from others shows its
+    inputs.</p>
   </div>
 
   <div class="qa">
@@ -153,8 +200,8 @@
     <p>Keep using it — and ask yourself whose record it is. The company's app
     writes to the company's system, and when a check comes up short, the
     argument is about numbers they keep. Ledger is <em>your</em> record, on your
-    phone, sealed so it can show it was never edited. Under U.S. wage law, when
-    an employer's records are inadequate, a worker's own contemporaneous
+    phone, sealed so an entry changed later no longer matches. Under U.S. wage
+    law, when an employer's records are inadequate, a worker's own contemporaneous
     records carry real weight. Two minutes a day buys you your own copy of the
     truth.</p>
   </div>
@@ -178,7 +225,9 @@
     <p>Lawsuits shown on the Radar tab are <em>filed claims</em>, taken from
     public federal dockets. A filed suit is an allegation until a court says
     otherwise, and every entry links to the record so you can read it
-    yourself.</p>
+    yourself. The list only runs to its last refresh, so newer suits are not
+    on it; from version 1.0.1 it shows that date. When it flags a contractor in your log, that is a match on the name
+    — open the docket to check it is the same company.</p>
   </div>
 
 </div>

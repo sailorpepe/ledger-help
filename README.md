@@ -21,17 +21,24 @@ pages live and nothing else.
 A laborer logs a day in twenty seconds — punch in and out, or just type the
 hours — and the overtime splits itself using the real rules in the collective
 agreement rather than jobsite folklore. Every entry is sealed with a hash
-chained to the one before it, so the record can show it has not been tampered
-with. A day that ran short asks why, and answers out of Article 39, which sets a
-floor for showing up and getting rained out that most members have never read.
+chained to the one written before it, so an entry changed afterwards no longer
+matches its seal. Seal times come from the phone's clock, and the seal is not
+proof against someone who rebuilds a whole log. A day that ran short asks why,
+and says what may be owed under Article 39, which sets a floor for showing up
+and getting rained out that most members have never read. Most of it is written
+for Will and Grundy counties, so the app labels it that way and points the
+member to his steward.
 
 It also reads the filings a union and its benefit funds are required by federal
 law to publish — LM-2 reports to the U.S. Department of Labor, Form 5500 reports
 under ERISA, and federal court dockets — and puts them in plain English and
 plain Spanish.
 
-It is free, it has no account, and nothing a member logs ever leaves their
-phone. There is no server to leave it to.
+It is free, it has no account, and the app never sends anything a member logs
+off their phone. There is no server to send it to. If the phone backs itself up
+to iCloud or a computer, that backup may include Ledger's data, the same as any
+app's. That copy is the member's, in their own iCloud account or on their own
+computer, and we never receive it.
 
 Built by a union laborer.
 
@@ -39,8 +46,9 @@ Built by a union laborer.
 
 Because the honest answer is one word. No account, no sign-up, no server, no
 analytics, no advertising, no third-party SDK. Everything a member enters is
-written to storage on their own phone and stays there. We could not produce
-anyone's log if we were asked for it, because we have never had it.
+written to storage on their own phone, and the app sends none of it anywhere.
+We could not produce anyone's log if we were asked for it, because we have
+never had it.
 
 ## Independence
 
@@ -51,11 +59,12 @@ the public records the app cites.
 
 The app is not legal or financial advice. Lawsuits it surfaces are filed claims
 taken from public dockets — allegations until a court says otherwise — and every
-one links to the record.
+one links to the record. The list is dated as of its last refresh, and a match
+against a member's log is a match on the name, to check against the docket.
 
 ## Building
 
-There is nothing to build. Three files, served as-is by GitHub Pages:
+There is nothing to build. Four files, served as-is by GitHub Pages:
 
 ```
 index.html      support page
